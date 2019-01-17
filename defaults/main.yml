@@ -1,0 +1,9 @@
+beary_local_file: "bearychat.py"
+beary_target: "/usr/bin/bearychat"
+
+
+beary_templates: [
+  { src: "{{ beary_local_file }}", dest: "{{ beary_target }}", mode: "0755" }
+]
+
+

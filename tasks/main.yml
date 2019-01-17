@@ -1,0 +1,18 @@
+---
+
+- pip:
+    name: bearychat
+    state: present 
+  become: True
+  become_user: root
+
+
+- name: Files are copied
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "{{ item.mode }}"
+  with_items: "{{ beary_templates }}"
+  become: True
+  become_user: root
+
